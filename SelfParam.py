@@ -13,34 +13,6 @@ class SelfParam:
         self._vigour = vigour # bool - is ring of vigour equipped for ultimate abilities? if true, 10% adrenaline retained after usage
         self._grimoire = grimoire # bool - is erethdor's grimoire turned on? if true, extra crit chance
         self._cancelledChannels = cancelledChannels # bool - are concentrated blast and regular fury cancelled after the first hit?
-    
-    # calculate player accuracy, assuming player is level 99 in attack, strength, magic, and ranged
-    def __F(level):
-        # F(a) listed at https://runescape.wiki/w/Hit_chance
-        return np.floor(.0008*(level**3) + 4*level + 40)
-
-    # calculate effective attack style skill level from various bonuses
-    __effectiveLevel = 99
-    if (overloadType == "normal"):
-        __effectiveLevel += 17
-    if (overloadType == "supreme"):
-        __effectiveLevel += 19
-    if (overloadType == "elder"):
-        __effectiveLevel += 21
-    
-    if (_curse == 95):
-        __effectiveLevel += 10
-    if (_curse == 99):
-        __effectiveLevel += 12
-    
-    if (_aura == "berserker"):
-        __effectiveLevel += 10
-
-    # combine bonuses from effective level, weapon tier, and accuracy-boosting auras
-    self._accuracy = np.floor(__F(__effectiveLevel) + 2.5*__F(_weaponTier))
-    if (_aura == "berserker" || _aura == "accuracy"):
-        self._accuracy *= np.floor(1.1)
-
 
     @property
     def weaponTier(self):
