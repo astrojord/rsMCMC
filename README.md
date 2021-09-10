@@ -26,8 +26,10 @@ These rotations have been built up over years of collaborative work, and there i
     - Affinity changes (Quake, Guthix Staff, SWH, Bandos godbook etc.)
     - Flanking availability
     - Stun status and immunity (for Wrack/Piercing Shot/Slice boosted damage)
-- MCMC performance optimization
-- Accuracy calculation optimization
+- Code/performance:
+    - `args`/`kwargs` in class constructors
+    - MCMC performance optimization?
+    - Accuracy calculation optimization
 
 
 RuneScape and its content are the copyright and trademark property of Jagex.

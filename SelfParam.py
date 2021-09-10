@@ -1,10 +1,11 @@
 import numpy as np
 
 class SelfParam:
-    def __init__(self, weaponTier, weaponType, totalBonus=np.zeros(3), perks=np.zeros(5), curse=0, aura="none", overloadType='none', activeAbilities=np.empty(0, dtype=str), vigour=True, grimoire=True, cancelledChannels=True):
+    def __init__(self, weaponStyle, weaponTier, weaponType, totalBonus=np.zeros(3), perks=np.zeros(5), curse=0, aura="none", overloadType='none', activeAbilities=np.empty(0, dtype=str), vigour=True, grimoire=True, cancelledChannels=True):
+        self._weaponStyle = weaponStyle # string - magic, ranged, or melee (needed to track cross-style accuracy penalties and affinities)
         self._weaponTier = weaponTier # int - level tier of equipped weapon, 1 to 99
         self._weaponType = weaponType # string - two handed only, dual wield only, or both (swapping when needed)
-        self._totalBonus = totalBonus # np.array[int] - user calculated total bonus from the armor and jewelry worn: [magic, ranged, melee]
+        self._totalBonus = totalBonus # np.array[int] - user-supplied total bonus from the armor and jewelry worn: [magic, ranged, melee]
         self._perks = perks # np.array[int] - levels of certain key perks: [aftershock, biting, precise, equilibrium, flanking]
         self._curse = curse # int - tier of the active curse: 0, 95, or 99
         self._aura = aura # string - type of active aura: none, berserker, or accuracy
