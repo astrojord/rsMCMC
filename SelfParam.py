@@ -17,7 +17,7 @@ class SelfParam:
     # calculate player accuracy, assuming player is level 99 in attack, strength, magic, and ranged
     def __F(level):
         # F(a) listed at https://runescape.wiki/w/Hit_chance
-        return .0008*(level**3) + 4*level + 40
+        return np.floor(.0008*(level**3) + 4*level + 40)
 
     # calculate effective attack style skill level from various bonuses
     __effectiveLevel = 99
@@ -37,9 +37,9 @@ class SelfParam:
         __effectiveLevel += 10
 
     # combine bonuses from effective level, weapon tier, and accuracy-boosting auras
-    self._accuracy = __F(__effectiveLevel) + 2.5*__F(_weaponTier)
+    self._accuracy = np.floor(__F(__effectiveLevel) + 2.5*__F(_weaponTier))
     if (_aura == "berserker" || _aura == "accuracy"):
-        self._accuracy *= 1.1
+        self._accuracy *= np.floor(1.1)
 
 
     @property
