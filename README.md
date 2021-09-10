@@ -23,7 +23,9 @@ These rotations have been built up over years of collaborative work, and there i
     - Weapon poison and cinderbane gloves
 - Target parameters: 
     - Smoke Cloud
-    - Affinity changes (Quake, Guthix Staff, SWH, Bandos God Book etc.)
+    - Affinity changes (Quake, Guthix Staff, SWH, Bandos godbook etc.)
+    - Flanking availability
+    - Stun status and immunity (for Wrack/Piercing Shot/Slice boosted damage)
 - MCMC performance optimization
 - Accuracy calculation optimization
 
