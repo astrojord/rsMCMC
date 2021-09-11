@@ -38,6 +38,7 @@ The game's community has done a lot of work over the years optimizing dynamic ro
     - Weapon poison and cinderbane gloves
     - Start at adrenaline lower than 100% (or up to 110%)
 - Target parameters: 
+    - Size (for SGB damage)
     - Smoke Cloud
     - Pre-applied affinity stacks
     - Affinity changes upon ability use (Quake, Guthix Staff, SWH, Bandos godbook etc.)
