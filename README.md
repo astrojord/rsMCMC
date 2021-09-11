@@ -4,6 +4,7 @@ Markov Chain Monte Carlo optimization of RuneScape 3 damage rotations, using the
 The game's community has done a lot of work over the years optimizing dynamic rotations of abilities, and collaboratively working to maximize the amount of damage dealt to a particular boss or monster. However, I've always wondered if there's some sort of bias in those conversations, and if we're so confident in what we've accomplished that we might be missing a better solution that we just haven't thought of yet. The goal of this work is to generate and explore new options for ability rotations in an effort to spur the imagination of the community, and introduce new ideas for discussion.
 
 ## Assumptions:
+- All rotation start at 100% adrenaline
 - Player is level 99 in Attack, Strength, Ranged, and Magic
 - Player is either limited to one of 2H/DW OR is willing to swap between the two as much as possible
 - If player is using dual wield, both weapons are of the same tier
@@ -35,6 +36,7 @@ The game's community has done a lot of work over the years optimizing dynamic ro
     - Cross style accuracy penalty
     - Incense sticks (kwuarm, others?)
     - Weapon poison and cinderbane gloves
+    - Start at adrenaline lower than 100% (or up to 110%)
 - Target parameters: 
     - Smoke Cloud
     - Pre-applied affinity stacks
