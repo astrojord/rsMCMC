@@ -18,9 +18,9 @@ def calcHitChance(player, target):
     # STEP 2: determine affinity on target based on player style
     if (player.weaponStyle == "magic"):
         effectiveAffinity = target.affinity[0]
-    if (player.weaponStyle == "ranged"):
+    elif (player.weaponStyle == "ranged"):
         effectiveAffinity = target.affinity[1]
-    if (player.weaponStyle == "melee"):
+    elif (player.weaponStyle == "melee"):
         effectiveAffinity = target.affinity[2]
 
     # STEP 3: calculate effective armor rating

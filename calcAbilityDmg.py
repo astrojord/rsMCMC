@@ -10,7 +10,7 @@ def calcAbilityDmg(player, target):
     abilityDmg = 0
     if (style == "magic"):
         baseDmg = 950.4 # Exsanguinate
-    if (style == "ranged"):
+    elif (style == "ranged"):
         baseDmg = 912 # enchanted bakriminel bolts (any type)
     # damage is the same for 2H vs. DW given that the offhand tier is equal to mainhand tier
     abilityDmg = 3.75*player.effectiveLevel() + min(14.4*player.weaponTier(), 1.5*baseDmg) + 1.5*player.totalBonus()[0]

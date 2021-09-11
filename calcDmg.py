@@ -14,8 +14,8 @@ def calcDmg(ability, player, target, hitChance, abilityDmg)
 
     # STEP 2: determine how the percentage ability damage changes before scaling with post-percentage factors
     scaledAbilityDmg = abilityDmg
-    crit = False # hits are naturally critical if above 95% of potential ability damage
-    bitingRank = player.perks()[1]
+    crit = False # hits are naturally critical if above 95% of potential ability damage (ish)
+    bitingRank = player.perks()[1] # 2% forced crit chance per rank
     preciseRank = player.perks()[2] # increases min hit by 1.5% per rank
     equilibriumRank = player.perks()[3] # reduces max and increases min hit by 1% and 3% respectively per rank
     flankRank = player.perks()[4] # increases min and max by 15% and 40% for thresholds and basics respectively per rank
@@ -40,11 +40,11 @@ def calcDmg(ability, player, target, hitChance, abilityDmg)
     if (target.hitMode() == "min"):  
         scaledAbilityDmg *= minDmg * (1.015 * preciseRank + 1.03 * equilibriumRank)
 
-    if (target.hitMode() == "max"):
+    elif (target.hitMode() == "max"):
         crit = True
         scaledAbilityDmg *= maxDmg * .99 * equilibriumRank
 
-    if (target.hitMode() == "avg"):
+    elif (target.hitMode() == "avg"):
         newMin = minDmg * 1.015 * preciseRank
         r = np.random.uniform(newMin, maxDmg)
         naturalCritChance = .95 - (.01 * equilibriumRank)
@@ -54,7 +54,7 @@ def calcDmg(ability, player, target, hitChance, abilityDmg)
 
     # STEP 3: determine if a crit is forced by various bonuses
     if ((player.grimoire() and (np.random.rand() < .12)) or (np.random.rand() < (player.perks()[1]*.02))):
-        # grim = 15%, biting = 2% per rank
+        # grim = 12%
         crit = True
 
     if ability.isBleed():
