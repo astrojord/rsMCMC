@@ -15,6 +15,23 @@ class SelfParam:
         self._grimoire = grimoire # bool - is erethdor's grimoire turned on? if true, extra crit chance
         self._cancelledChannels = cancelledChannels # bool - are concentrated blast and regular fury cancelled after the first hit?
 
+    # calculate effective attack style skill level from various bonuses
+    self._effectiveLevel = 99 # assume the player is level 99 in attack, strength, magic, and ranged
+    if (player.overloadType() == "normal"):
+        self._effectiveLevel += 17
+    if (player.overloadType() == "supreme"):
+        self._effectiveLevel += 19
+    if (player.overloadType() == "elder"):
+        self._effectiveLevel += 21
+    
+    if (player.curse() == 95):
+        self._effectiveLevel += 10
+    if (player.curse() == 99):
+        self._effectiveLevel += 12
+    
+    if (player.aura() == "berserker"):
+        self._effectiveLevel += 10
+
     @property
     def weaponTier(self):
         return self._weaponTier
@@ -60,5 +77,5 @@ class SelfParam:
         return self._cancelledChannels
 
     @property
-    def accuracy(self):
-        return self._accuracy
+    def effectiveLevel(self):
+        return self._effectiveLevel

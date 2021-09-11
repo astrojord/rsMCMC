@@ -6,13 +6,20 @@ These rotations have been built up over years of collaborative work, and there i
 ## Assumptions:
 - Player is level 99 in Attack, Strength, Ranged, and Magic
 - Player is either limited to one of 2H/DW OR is willing to swap between the two as much as possible
+- If player is using dual wield, both weapons are of the same tier
 - Target is in range and damageable for entire duration
 - Any non-damaging debuffs like Vulnerability or Smoke Cloud are pre-applied
+- Magic auto attacks are Exsanguinate (base damage 950)
+- Ranged auto attacks use non-specific enchanted bakriminel bolts
+- Melee auto attacks are average speed if 2H, fastest speed if DW
 
 ## To do:
 - Abilities:
     - Expand the list of supported special attack weapons
 - Player and gear parameters: 
+    - Melee auto attack damage scales properly with weapon tier 
+    - 4-8 boosted damage from effective levels past 99 + effects from perks (https://runescape.wiki/w/Ability_damage#Boosting_ability_damage)
+    - Magic spell selection
     - Greater (ability) codexes: Barge, Flurry, Fury, Ricochet, Dazing Shot/Salt the Wound, Chain
     - Essence of Finality-stored special attack weapons
     - 4TAA
