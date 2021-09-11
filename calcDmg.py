@@ -36,8 +36,7 @@ def calcDmg(ability, player, target, hitChance, abilityDmg)
             minDmg += .4 * flankRank
             maxDmg += .4 * flankRank
 
-    # hit mode calculation
-    
+    # hit mode calculation, application of precise and equilibrium, and determination of natural crit
     if (target.hitMode() == "min"):  
         scaledAbilityDmg *= minDmg * (1.015 * preciseRank + 1.03 * equilibriumRank)
 

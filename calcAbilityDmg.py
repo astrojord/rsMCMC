@@ -5,27 +5,17 @@ from TargetParam import TargetParam
 def calcAbilityDmg(player, target):
     # inputs: SelfParam player, TargetParam target
 
+    style = player.weaponStyle()
+    baseDmg = 0
     abilityDmg = 0
-    if (player.weaponStyle() == "magic"):
-        mainhandSpellDmg = 950.4 # Exsanguinate
-        offhandSpellDmg = 950.4 # Exsanguinate
-        if (player.weaponType() == "2h"):
-            abilityDmg = 3.75*player.effectiveLevel() + min(14.4*player.weaponTier(), 1.5*mainhandSpellDmg) + 1.5*player.totalBonus()[0]
-        else: # dual wield or swapping
-            # mainhand + offhand = total
-            abilityDmg = (2.5*player.effectiveLevel() + min(9.6*player.weaponTier(), mainhandSpellDmg) + player.totalBonus()[0]) 
-                         + (1.25*player.effectiveLevel() + min(4.8*player.weaponTier(), .5*offhandSpellDmg) + 0.5*player.totalBonus()[0])
-  
-    if (player.weaponStyle == "ranged"):
-        ammoDmg = 912 # enchanted bakriminel bolts (any type)
-        if (player.weaponType() == "2h"):
-            abilityDmg = 3.75*player.effectiveLevel() + min(14.4*player.weaponTier(), 1.5*ammoDmg) + 1.5*player.totalBonus()[1]
-        else: # dual wield or swapping
-            # mainhand + offhand = total
-            abilityDmg = (2.5*player.effectiveLevel() + min(9.6*player.weaponTier(), ammoDmg) + player.totalBonus()[1]) 
-                         + (1.25*player.effectiveLevel() + min(4.8*player.weaponTier(), .5*ammoDmg) + 0.5*player.totalBonus()[1])
+    if (style == "magic"):
+        baseDmg = 950.4 # Exsanguinate
+    if (style == "ranged"):
+        baseDmg = 912 # enchanted bakriminel bolts (any type)
+    # damage is the same for 2H vs. DW given that the offhand tier is equal to mainhand tier
+    abilityDmg = 3.75*player.effectiveLevel() + min(14.4*player.weaponTier(), 1.5*baseDmg) + 1.5*player.totalBonus()[0]
 
-    if (player.weaponStyle == "melee"):
+    if (style == "melee"):
         mainhandDmg = 883.2 # MH khopesh
         offhandDmg = 441.6 # OH khopesh
         if (player.weaponType() == "2h"):
