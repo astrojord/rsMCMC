@@ -12,6 +12,7 @@ These rotations have been built up over years of collaborative work, and there i
 - Magic auto attacks are Exsanguinate
 - Ranged auto attacks use non-specific enchanted bakriminel bolts
 - Melee auto attacks are average speed if 2H, fastest speed if DW, and use T92 damage
+- All flankable abilities are flanked at the same tier as main weapons and without loss of Aftershock stacks
 
 ## To do:
 - Abilities:
@@ -44,6 +45,7 @@ These rotations have been built up over years of collaborative work, and there i
     - `args`/`kwargs` in class constructors
     - MCMC performance optimization?
     - Accuracy calculation optimization
+    - Should average damage calculations be seeded for reproducibility?
 
 
 RuneScape and its content are the copyright and trademark property of Jagex.
