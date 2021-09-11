@@ -1,7 +1,7 @@
 import numpy as np
 
 class Ability:
-    def __init__(self, name, style, weaponReq, dmg, adrenReq, adrenChange, castTime, duration=3 isBleed=False, isFlank=False):
+    def __init__(self, name, style, weaponReq, dmg, adrenReq, adrenChange, castTime, duration=3, cooldown=6, isBleed=False, isFlank=False):
         self._name = name # string - ability name
         self._style = style # string - magic, ranged, or melee
         self._weaponReq = weaponReq # string - two handed or dual wield
@@ -10,6 +10,7 @@ class Ability:
         self._adrenChange = adrenChange # int - how much adrenaline is gained/lost on ability usage
         self._castTime = castTime # np.array[int] - instances that damage is applied to target, in terms of ticks after ability cast time
         self._duration = duration # int - number of ticks that it takes to fully cast the ability without cancellation
+        self._cooldown = cooldown # int - number of ticks the ability is on cooldown after being used
         self._isBleed = isBleed # bool - is the ability considered a bleed? if yes, no crit can occur
         self._isStun = isStun # bool - is the ability able to be flanked? if yes, flanking can apply
 
