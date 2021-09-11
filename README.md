@@ -1,7 +1,7 @@
 # rsMCMC
 Markov Chain Monte Carlo optimization of RuneScape 3 damage rotations, using the Metropolis-Hastings algorithm. 
-The overall goal is to explore potentially high-damage sequences of casted abilities, perhaps different than the popular rotations made by the community.
-These rotations have been built up over years of collaborative work, and there is potential for a more optimal sequence of abilities that we have collectively ignored, since we understandably stick with what we know.
+
+The game's community has done a lot of work over the years optimizing dynamic rotations of abilities, and collaboratively working to maximize the amount of damage dealt to a particular boss or monster. However, I've always wondered if there's some sort of bias in those conversations, and if we're so confident in what we've accomplished that we might be missing a better solution that we just haven't thought of yet. The goal of this work is to generate and explore new options for ability rotations in an effort to spur the imagination of the community, and introduce new ideas for discussion.
 
 ## Assumptions:
 - Player is level 99 in Attack, Strength, Ranged, and Magic
