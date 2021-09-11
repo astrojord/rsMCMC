@@ -3,8 +3,13 @@ Markov Chain Monte Carlo optimization of RuneScape 3 damage rotations, using the
 The overall goal is to explore potentially high-damage sequences of casted abilities, perhaps different than the popular rotations made by the community.
 These rotations have been built up over years of collaborative work, and there is potential for a more optimal sequence of abilities that we have collectively ignored, since we understandably stick with what we know.
 
+## Assumptions:
+- Player is level 99 in Attack, Strength, Ranged, and Magic
+- Player is either limited to one of 2H/DW OR is willing to swap between the two as much as possible
+- Target is in range and damageable for entire duration
+- Any non-damaging debuffs like Vulnerability or Smoke Cloud are pre-applied
 
-## To-do:
+## To do:
 - Abilities:
     - Expand the list of supported special attack weapons
 - Player and gear parameters: 
@@ -23,7 +28,8 @@ These rotations have been built up over years of collaborative work, and there i
     - Weapon poison and cinderbane gloves
 - Target parameters: 
     - Smoke Cloud
-    - Affinity changes (Quake, Guthix Staff, SWH, Bandos godbook etc.)
+    - Pre-applied affinity stacks
+    - Affinity changes upon ability use (Quake, Guthix Staff, SWH, Bandos godbook etc.)
     - Flanking availability
     - Stun status and immunity (for Wrack/Piercing Shot/Slice boosted damage)
 - Code/performance:
