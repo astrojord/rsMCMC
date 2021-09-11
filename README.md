@@ -9,9 +9,9 @@ These rotations have been built up over years of collaborative work, and there i
 - If player is using dual wield, both weapons are of the same tier
 - Target is in range and damageable for entire duration
 - Any non-damaging debuffs like Vulnerability or Smoke Cloud are pre-applied
-- Magic auto attacks are Exsanguinate (base damage 950)
+- Magic auto attacks are Exsanguinate
 - Ranged auto attacks use non-specific enchanted bakriminel bolts
-- Melee auto attacks are average speed if 2H, fastest speed if DW
+- Melee auto attacks are average speed if 2H, fastest speed if DW, and use T92 damage
 
 ## To do:
 - Abilities:
@@ -20,6 +20,7 @@ These rotations have been built up over years of collaborative work, and there i
     - Melee auto attack damage scales properly with weapon tier 
     - 4-8 boosted damage from effective levels past 99 + effects from perks (https://runescape.wiki/w/Ability_damage#Boosting_ability_damage)
     - Magic spell selection
+    - Effects on successful casts of Concentrated Blast, Fury, Dazing Shot, and Needle Strike
     - Greater (ability) codexes: Barge, Flurry, Fury, Ricochet, Dazing Shot/Salt the Wound, Chain
     - Essence of Finality-stored special attack weapons
     - 4TAA

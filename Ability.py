@@ -5,7 +5,7 @@ class Ability:
         self._name = name # string - ability name
         self._style = style # string - magic, ranged, or melee
         self._weaponReq = weaponReq # string - two handed or dual wield
-        self._dmg = dmg # np.array[int] - [% low end, % high end]
+        self._dmg = dmg # np.array[float] - [low end, high end]
         self._adrenReq = adrenReq # int - how much adrenaline is required to use the ability
         self._adrenChange = adrenChange # int - how much adrenaline is gained/lost on ability usage
         self._castTime = castTime # np.array[int] - instances that damage is applied to target, in terms of ticks after ability cast time

@@ -12,7 +12,7 @@ def calcHitChance(player, target):
 
     # combine bonuses from effective level, weapon tier, and accuracy-boosting auras
     accuracy = np.floor(F(player.effectiveLevel()) + 2.5*F(player.weaponTier()))
-    if (player.aura() == "berserker" || player.aura() == "accuracy"):
+    if (player.aura() == "berserker" or player.aura() == "accuracy"):
         accuracy *= np.floor(1.1)
 
     # STEP 2: determine affinity on target based on player style
