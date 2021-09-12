@@ -24,7 +24,7 @@ def calcHitChance(player, target):
         effectiveAffinity = target.affinity[2]
 
     # STEP 3: calculate effective armor rating
-    effectiveAR = F(target.level) + target.armorRating
+    effectiveAR = F(target.level()) + target.armorRating()
 
     # STEP 4: math + apply various bonuses
     hitChance = effectiveAffinity * accuracy / effectiveAR
