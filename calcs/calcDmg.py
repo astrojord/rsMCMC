@@ -25,7 +25,7 @@ def calcDmg(ability, player, target, hitChance, abilityDmg)
         # not affected by equilibrium
         equilibriumRank = 0;
 
-    if ability.isStun():
+    if ability.isFlank():
         # assume (for now) that all flankable abilities are flanked at same tier as main weapons with no loss of aftershock stacks
         if (ability.adrenChange > 0): # thresholds
             minDmg += .15 * flankRank
