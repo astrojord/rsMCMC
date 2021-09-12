@@ -79,3 +79,10 @@ class SelfParam:
     @property
     def effectiveLevel(self):
         return self._effectiveLevel
+
+    @activeAbilities.setter
+    def activeAbilites(self, abilities):
+        if isInstance(list, np.array):
+            self._activeAbilities = abilities
+        else:
+            raise TypeError("Active abilities list must be of type np.array")
