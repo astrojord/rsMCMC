@@ -17,8 +17,8 @@ def generateSequence(n, abilities, player, target):
         candidate = abilities[r]
         
         # check if ability is right style, player has enough adrenaline, and ability is not on cooldown
-        recentlyUsed = sequence[(max(0,i-candidate.cooldown()):i] # get all the ticks since the last cooldown, not going backwards in the array
-        if ((candidate.style() == player.weaponStyle()) and (candidate.adrenReq() < adren) and (candidate.name() not in recentlyUsed)):
+        recentlyUsed = sequence[(max(0,i-candidate.cooldown):i] # get all the ticks since the last cooldown, not going backwards in the array
+        if ((candidate.style == player.weaponStyle) and (candidate.adrenReq < adren) and (candidate.name not in recentlyUsed)):
             sequence[i] = candidate
-            i += candidate.duration() # move the pointer forward the amount of ticks it takes to cast the ability successfully
-            adren += candidate.adrenChange()
+            i += candidate.duration # move the pointer forward the amount of ticks it takes to cast the ability successfully
+            adren += candidate.adrenChange

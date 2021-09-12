@@ -11,20 +11,20 @@ def calcHitChance(player, target):
         return np.floor(.0008*(level**3) + 4*level + 40)
 
     # combine bonuses from effective level, weapon tier, and accuracy-boosting auras
-    accuracy = np.floor(F(player.effectiveLevel()) + 2.5*F(player.weaponTier()))
-    if (player.aura() == "berserker" or player.aura() == "accuracy"):
+    accuracy = np.floor(F(player.effectiveLevel) + 2.5*F(player.weaponTier))
+    if (player.aura == "berserker" or player.aura == "accuracy"):
         accuracy = np.floor(1.1*accuracy)
 
     # STEP 2: determine affinity on target based on player style
-    if (player.weaponStyle == "magic"):
+    if (player.weaponStyle() == "magic"):
         effectiveAffinity = target.affinity[0]
-    elif (player.weaponStyle == "ranged"):
+    elif (player.weaponStyle() == "ranged"):
         effectiveAffinity = target.affinity[1]
-    elif (player.weaponStyle == "melee"):
+    elif (player.weaponStyle() == "melee"):
         effectiveAffinity = target.affinity[2]
 
     # STEP 3: calculate effective armor rating
-    effectiveAR = F(target.level()) + target.armorRating()
+    effectiveAR = F(target.level) + target.armorRating
 
     # STEP 4: math + apply various bonuses
     hitChance = effectiveAffinity * accuracy / effectiveAR
