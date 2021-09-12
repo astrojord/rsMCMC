@@ -13,7 +13,7 @@ def calcSequenceDamage(sequence, player, target, hitChance, abilityDmg):
         total += calcDmg(a, player, target, hitChance, abilityDmg)
     
     # determine the number of aftershock perks and apply damage
-    aftershockCount = total % 50000
+    aftershockCount = total // 50000
     aftershockRank = player.perks()[0]
     total += .318 * abilityDmg * aftershockRank # 31.8% on average, will implement full range later
 
