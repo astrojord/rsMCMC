@@ -25,13 +25,11 @@ def main(args):
         startSequence = [_slice] * n
 
     # run MCMC for specified iterations and store damage for each iteration
-    j = 0
     nextSequence = startSequence
     damageList = np.empty(it, dtype=int)
-    while (j < it):
+    for j in range(it)
         nextSequence, damageList[j] = mcStep(n, nextSequence, player, target, abilities, hitChance, abilityDmg)
         # how am I going to define abilities array in a nice pythonic way?
-        j += 1
     
     # plot damage over each iteration and return final sequence
     damagePlot(n, it, damageList)
