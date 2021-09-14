@@ -4,7 +4,7 @@ class Ability:
     def __init__(self, name, style, weaponReq, dmg, adrenReq, adrenChange, duration=3, cooldown=6, isBleed=False, isFlank=False):
         self._name = name # string - ability name
         self._style = style # string - magic, ranged, or melee
-        self._weaponReq = weaponReq # string - two handed or dual wield
+        self._weaponReq = weaponReq # string - 2h, dw, or both
         self._dmg = dmg # np.array[float] - [low end, high end]
         self._adrenReq = adrenReq # int - how much adrenaline is required to use the ability
         self._adrenChange = adrenChange # int - how much adrenaline is gained/lost on ability usage
