@@ -21,3 +21,11 @@ def mcStep(n, current, player, target, abilities, hitChance, abilityDmg):
         return new, newDmg # accept
     else: 
         return current, currentDmg # reject and keep current
+
+def mcLoop(n, it, startSequence, player, target, abilities, hitChance, abilityDmg)
+    current = startSequence
+    damageList = np.empty(it, dtype=int)
+    for j in range(it)
+        current, damageList[j] = mcStep(n, current, player, target, abilities, hitChance, abilityDmg)
+
+    return damageList, current
