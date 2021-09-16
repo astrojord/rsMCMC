@@ -1,7 +1,7 @@
 import numpy as np
 
 class Ability:
-    def __init__(self, name, style, weaponReq, dmg, adrenReq, adrenChange, duration=3, cooldown=6, isBleed=False, isFlank=False):
+    def __init__(self, name, style, weaponReq, dmg, adrenReq, adrenChange, duration=1, cooldown=25, isBleed=False, isFlank=False):
         self._name = name # string - ability name
         self._style = style # string - magic, ranged, or melee
         self._weaponReq = weaponReq # string - 2h, dw, or both

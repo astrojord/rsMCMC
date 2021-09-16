@@ -14,6 +14,7 @@ The game's community has done a lot of work over the years optimizing dynamic ro
 - Ranged auto attacks use non-specific enchanted bakriminel bolts
 - Melee auto attacks are average speed if 2H, fastest speed if DW, and use T92 damage
 - All flankable abilities are flanked at the same tier as main weapons and without loss of Aftershock stacks
+- All Sunshine and Death's Swiftness uses are done with a Planted Feet switch without loss of Aftershock stacks
 
 ## To do:
 - Abilities:
