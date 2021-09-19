@@ -22,7 +22,7 @@ def main(args):
     # instantiate player and target, then calculate the hit chance and ability damage
     player = SelfParam(weaponStyle, weaponTier, weaponType, totalBonus, perks, curse, 
                        aura, overloadType, activeAbilities, vigour, grimoire, cancelledChannels)
-    target = TargetParam() # do this soon 
+    target = TargetParam(level, armorRating, size, affinity, hitMode, vulnerability, smokeCloud)
     hitChance = calcHitChance(player, target)
     abilityDmg = calcAbilityDmg(player, target)
 
