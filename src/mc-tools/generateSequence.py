@@ -1,7 +1,7 @@
 import numpy as np
-from Ability import Ability
-from SelfParam import SelfParam
-from TargetParam import TargetParam
+from classes.Ability import Ability
+from classes.SelfParam import SelfParam
+from classes.TargetParam import TargetParam
 
 def generateSequence(n, abilities, player, target):
     # inputs: int n, array of Ability abilities, SelfParam player, TargetParam target

@@ -1,13 +1,14 @@
 import numpy as np
 import sys
-from mcmc import *
-from damagePlot import *
-from makeAbilities import *
-from calcHitChance import *
-from calcAbilityDmg import *
-from Ability import Ability
-from SelfParam import SelfParam
-from TargetParam import TargetParam
+from mc-tools.mcmc import *
+from mc-tools.damagePlot import *
+from mc-tools.makeAbilities import *
+from mc-tools.getInputs import *
+from calcs.calcHitChance import *
+from calcs.calcAbilityDmg import calcAbilityDmg
+from classes.Ability import Ability
+from classes.SelfParam import SelfParam
+from classes.TargetParam import TargetParam
 
 # EXPECTED COMMAND LINE USAGE:
 # $ python main.py n it

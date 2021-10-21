@@ -1,6 +1,6 @@
 import numpy as np
-from SelfParam import SelfParam
-from TargetParam import TargetParam
+from classes.SelfParam import SelfParam
+from classes.TargetParam import TargetParam
 
 def calcHitChance(player, target):
     # inputs: SelfParam player, TargetParam target

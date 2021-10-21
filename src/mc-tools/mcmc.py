@@ -1,10 +1,10 @@
 import numpy as np
-from calcDmg import *
-from calcSequenceDamage import *
-from generateSequence import *
-from Ability import Ability
-from SelfParam import SelfParam
-from TargetParam import TargetParam
+from calcs.calcDmg import calcDmg
+from calcs.calcSequenceDamage import calcSequenceDamage
+from generateSequence import generateSequence
+from classes.Ability import Ability
+from classes.SelfParam import SelfParam
+from classes.TargetParam import TargetParam
 
 def mcStep(n, current, player, target, abilities, hitChance, abilityDmg):
     # calculate the damage of the current sequence

@@ -1,8 +1,8 @@
 import numpy as np
-from calcDmg import *
-from Ability import Ability
-from SelfParam import SelfParam
-from TargetParam import TargetParam
+from calcs.calcDmg import calcDmg
+from classes.Ability import Ability
+from classes.SelfParam import SelfParam
+from classes.TargetParam import TargetParam
 
 def calcSequenceDamage(sequence, player, target, hitChance, abilityDmg):
     # input: array of Ability (length n), SelfParam player, TargetParam target, int abilityDmg, float hitChance
